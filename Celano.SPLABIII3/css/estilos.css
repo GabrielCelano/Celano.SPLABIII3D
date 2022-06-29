@@ -1,0 +1,29 @@
+a, p{
+    color: white;
+}
+
+footer {
+    box-shadow: 0 50vh 0 50vh orangered;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    #tituloAnimales{
+      display: none;
+    }
+}
+
+@media (max-width: 700px) {
+  #derechos{
+    visibility: hidden;
+  }
+}

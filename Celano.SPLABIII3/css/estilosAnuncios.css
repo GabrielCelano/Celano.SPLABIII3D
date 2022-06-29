@@ -1,0 +1,32 @@
+.body{
+  background-image: url("../img/fondoAnuncios.jpg");
+}
+
+li a{
+  color: white;
+}
+
+p{
+  padding-left: 20px;
+}
+
+p img{
+  padding-right: 20px;
+  display: flex;
+  float: left;
+}
+
+h1,h3{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+div img{
+  height: 20px;
+}
+
+.card-text{
+  display: flex;
+  justify-content: center;
+}

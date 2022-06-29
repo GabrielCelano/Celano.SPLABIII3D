@@ -1,0 +1,40 @@
+{
+  "anuncios": [
+    {
+      "id": 1656454779712,
+      "titulo": "Venta de gato",
+      "transaccion": "venta",
+      "descripcion": "Venta de gato persa",
+      "precio": 444444,
+      "animal": "gato",
+      "raza": "Persa",
+      "fecha_de_nacimiento": "2022-06-01",
+      "vacuna": "si",
+      "castrado": "si"
+    },
+    {
+      "id": 1656454814218,
+      "titulo": "dfgdfgfgd",
+      "transaccion": "venta",
+      "descripcion": "dfgdfg",
+      "precio": 10000,
+      "animal": "gato",
+      "raza": "Labrador",
+      "fecha_de_nacimiento": "2022-05-31",
+      "vacuna": "si",
+      "castrado": "no"
+    },
+    {
+      "id": 1656457869481,
+      "titulo": "aaaaaaa",
+      "transaccion": "venta",
+      "descripcion": "aaaaa",
+      "precio": 111111,
+      "animal": "perro",
+      "raza": "aaaaa",
+      "fecha_de_nacimiento": "2022-03-28",
+      "vacuna": "si",
+      "castrado": "si"
+    }
+  ]
+}

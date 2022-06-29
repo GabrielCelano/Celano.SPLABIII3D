@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous" defer></script>
+    <script src="./scripts/app.js" type="module" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" media="(max-width: 2000px)" href="./css/estilos.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Segundo Parcial - Tema 5</title>
+  </head>
+  <body>
+    <header
+      class="d-flex flex-wrap py-3 mb-4 border-bottom justify-content-between"
+      style="background-color: orangered"
+    >
+      <img
+        class="rounded float-start"
+        src="./img/logo.png"
+        alt="logo.png"
+        height="100px"
+      />
+      <nav class="navbar navbar-expand">
+        <div class="navbar-collapse justify-content-between">
+          <ul class="nav float-end">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./anuncios.html">Anuncios</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h3 id="administracion">Administración</h3>
+    <header>
+      <img
+        id="tituloAnimales"
+        class="card-img-bottom"
+        src="./img/tituloAnimales.jpg"
+        alt="tituloAnimales.jpg"
+        height="450px"
+      />
+    </header>
+    <hr />
+    <div class="container">
+      <form action="#">
+        <fieldset>
+          <h3>Informacion del Anuncio</h3>
+          <div id="alertaCustom"></div>
+          <div class="row justify-content-center">
+            <div class="form-group col-9">
+              <input type="hidden" name="id">
+              <label for="lblTitulo">TITULO:</label>
+              <input type="text" id="txtTitulo" class="form-control" placeholder="Titulo" required/>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="form-group col-9">
+              <label for="lbltDescripcion">DESCRIPCION:</label>
+              <input type="text" id="txtDescripcion" class="form-control" placeholder="Descripcion" required/>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="form-group col-9">
+              <label for="txtDescripcion" class="col-3">ANIMAL:</label>
+              <div class="form-check form-check-inline col-3">
+                <input type="radio" name="rdoAnimal" id="rdoPerro" class="form-check-input" value="perro" checked/>
+                <label for="lblPerro" class="form-check-label">Perro</label>
+              </div>
+              <div class="form-check form-check-inline col-3">
+                <input type="radio" name="rdoAnimal" id="rdoGato" class="form-check-input" value="gato"/>
+                <label for="lblGato" class="form-check-label">Gato</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" name="chkCastrado" id="chkCastrado" class="form-check-input" value="no"/>
+                <label for="lblCastrado" class="form-check-label">Castrado</label>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="form-group col-9">
+              <label for="lbltPrecio">PRECIO:</label>
+              <input
+                type="number"
+                id="nmbPrecio"
+                class="form-control"
+                placeholder="Precio"
+                required
+              />
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <img class="svg" src="./img/pie.svg" alt="pie.svg" height="40px" />
+            <div class="form-group col-2">
+              <input
+                type="text"
+                id="txtRaza"
+                class="form-control"
+                placeholder="Raza"
+                required
+              />
+            </div>
+            <img
+              class="svg"
+              src="./img/gato.svg"
+              alt="gato.svg"
+              height="40px"
+            />
+            <div class="form-group col-2">
+              <input type="date" id="dateFecha" class="form-control" required />
+            </div>
+            <img
+              class="svg"
+              src="./img/vacuna.svg"
+              alt="vacuna.svg"
+              height="40px"
+            />
+            <select
+              class="col-2 form-select-lg mb-3"
+              name="slcVacunas"
+              id="vacunas"
+              required
+            >
+              <option value="">-------Elegir-------</option>
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="row justify-content-center">
+            <div class="form-group col-9" id="divButton">
+              <button
+                class="btn btn-primary"
+                type="submit"
+                id="btnGuardar"
+                value="btnGuardar"
+              >
+                <img
+                  class="svgSave"
+                  src="./img/save.svg"
+                  alt="save.svg"
+                  height="20px"
+                />Guardar
+              </button>
+              <button
+                class="invisible"
+                type="button"
+                id="btnEliminar"
+                value="btnEliminar"
+              >
+                Eliminar
+              </button>
+              <button
+                class="invisible"
+                type="button"
+                id="btnCancelar"
+                value="btnCancelar"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </fieldset>
+        <div class="spinner d-flex justify-content-center"></div>
+      </form>
+      <hr />
+    </div>
+      <div class="container-fluid " style="background-color: rgb(211, 179, 0);">
+          <div class="row col-2">
+            <label class="text-uppercase font-weight-bold" for="">Filtrar por:</label>
+            <select class="custom-select" name="slcFiltro" id="slcFiltro">
+              <option value="todos">Todos</option>
+              <option value="gato">Gatos</option>
+              <option value="perro">Perros</option>
+            </select>
+          </div>
+          <div class="row col-2">
+            <label class="text-uppercase font-weight-bold" for="">PROMEDIO:</label>
+            <input type="text" class="form-control" id="inputPromedio" readonly>
+          </div>
+      <h4 class="border-bottom border-dark">Tildar los campos a mostrar</h4>
+    <div id="campos" class="container-fluid" style="background-color: rgb(211, 179, 0);">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columTitulo" checked>
+        <label class="form-check-label">TITULO</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columTransaccion" checked>
+        <label class="form-check-label">TRANSACCION</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columDescripcion" checked>
+        <label class="form-check-label">DESCRIPCION</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columPrecio" checked>
+        <label class="form-check-label">PRECIO</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columAnimal" checked>
+        <label class="form-check-label">ANIMAL</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columRaza" checked>
+        <label class="form-check-label">RAZA</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columFecha" checked>
+        <label class="form-check-label">FECHA DE NACIMIENTO</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columVacuna" checked>
+        <label class="form-check-label">VACUNA</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="columCastrado" checked>
+        <label class="form-check-label">CASTRADO</label>
+      </div>
+    </div>
+  </div>
+  
+
+    <div class="table-responsive"></div>
+    <footer>
+      <nav class="navbar navbar-expand" style="background-color: orangered">
+        <div class="navbar-collapse justify-content-between">
+          <ul class="nav float-end">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./anuncios.html">Anuncios</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+          </ul>
+          <p id="derechos">Todos los Derechos Reservados 2022 &copy;</p>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
